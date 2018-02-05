@@ -108,7 +108,7 @@ for item in seqs_dict:
 
         for x in range(0, (seq_range - y)):
             r_primer = reverse[x:x + y]
-            if check_clamp(r_primer, False) == True:
+            if check_clamp(r_primer, True) == True:
                 GC = r_primer.count("G") + r_primer.count("C")
                 Tm, good_tm = check_Tm(GC, r_primer)
                 if good_tm == True:
